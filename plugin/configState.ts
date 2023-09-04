@@ -1,5 +1,5 @@
-import { OrionLocalConfig } from '../types/OrionLocalConfig'
+import { LocalConfig } from '../types/LocalConfig'
 
-export const configState: OrionLocalConfig = {
+export const configState: LocalConfig = {
   mockRequestTimeoutMs: 500,
 }

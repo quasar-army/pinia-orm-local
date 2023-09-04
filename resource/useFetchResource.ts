@@ -3,15 +3,15 @@ import { MaybeComputedRef, MaybeRef, useLocalStorage } from '@vueuse/core'
 import { Model } from '../types'
 import { ResourceNode } from '../types/ResourceNode'
 import { Repository, useRepo } from 'pinia-orm'
-import { OrionFilters } from '../types/query/OrionFilters'
-import { OrionAggregate } from '../types/query/OrionAggregate'
+import { Filters } from '../types/query/Filters'
+import { Aggregate } from '../types/query/Aggregate'
 import { configState } from '../plugin/configState'
 
 export type OnFetchCallback<ModelType extends Model> = (resourceNode: ResourceNode<ModelType>) => void
 
 export interface FetchResourceOptions<ModelType extends Model> {
-  filters?: MaybeComputedRef<OrionFilters>
-  aggregates?: MaybeComputedRef<OrionAggregate[]>
+  filters?: MaybeComputedRef<Filters>
+  aggregates?: MaybeComputedRef<Aggregate[]>
   id?: MaybeRef<number | string | undefined>
   onFetch?: OnFetchCallback<ModelType>
   immediate?: boolean

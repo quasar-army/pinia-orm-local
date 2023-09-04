@@ -1,8 +1,8 @@
 /**
  * Plugin
  */
-export { type OrionLocalConfig } from './types/OrionLocalConfig'
-export { OrionLocalPlugin } from './plugin/OrionLocalPlugin'
+export { type LocalConfig } from './types/LocalConfig'
+export { LocalPlugin } from './plugin/LocalPlugin'
 
 /**
  * Resource
@@ -16,7 +16,7 @@ export { useFetchResource } from './resource/useFetchResource'
 /**
  * Contracts
  */
-export type { UseOrionRestStateManipulator } from './types/UseOrionRestStateManipulator'
+export type { UseRestStateManipulator } from './types/UseRestStateManipulator'
 
 /**
  * Other
@@ -27,4 +27,4 @@ export { makeFormFromModel } from './resource/makeFormFromModel'
 /**
  * Types
  */
-export type { OrionFilter, OrionFilters } from './types/query/OrionFilters'
+export type { Filter, Filters } from './types/query/Filters'

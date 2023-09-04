@@ -1,6 +1,6 @@
 import { Model, Relation } from 'pinia-orm'
 import nonFormProps from '../constants/nonFormProps'
-import { PiniaOrmForm } from '@quasar-army/pinia-orm-helpers'
+import { PiniaOrmForm } from 'pinia-orm-helpers'
 
 export function makeFormFromModel (
   model: Model,

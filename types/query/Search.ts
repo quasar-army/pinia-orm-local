@@ -1,4 +1,4 @@
-export interface OrionSearch {
+export interface Search {
   value: string
   case_sensitive?: boolean
 }

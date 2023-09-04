@@ -1,4 +1,4 @@
-import { OrionFilters } from './OrionFilters'
+import { Filters } from './Filters'
 
 export type Aggregate = 'count' |
   'avg' |
@@ -7,11 +7,11 @@ export type Aggregate = 'count' |
   'max' |
   'exists'
 
-export interface OrionAggregate {
+export interface Aggregate {
   type: Aggregate
   relation: string
   field?: string
-  filters?: OrionFilters
+  filters?: Filters
 }
 
 export const aggregates: Aggregate[] = [
