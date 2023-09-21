@@ -1,5 +1,5 @@
 import { Collection } from './Collection'
-import { Model } from './Model'
+import { Model } from 'pinia-orm'
 import { Resource } from './Resource'
 
 export interface UseRestStateManipulator {

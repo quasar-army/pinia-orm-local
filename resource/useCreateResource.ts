@@ -1,5 +1,5 @@
 import { Ref, ref } from 'vue'
-import { Model } from '../types/Model'
+import { Model } from 'pinia-orm'
 import { Repository, useRepo } from 'pinia-orm'
 import { GetModelsFormKeys } from '../types/GetModelsFormKeys'
 import { PiniaOrmForm } from 'pinia-orm-helpers'

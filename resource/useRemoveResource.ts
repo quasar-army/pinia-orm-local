@@ -1,6 +1,6 @@
 import { Repository, useRepo } from 'pinia-orm'
 import { ComputedRef, Ref, ref } from 'vue'
-import { Model } from '../types'
+import { Model } from 'pinia-orm'
 import { ResourceNode } from '../types/ResourceNode'
 import { useLocalStorage } from '@vueuse/core'
 import { configState } from '../plugin/configState'
@@ -43,7 +43,7 @@ export default function useRemoveResource<ModelType extends typeof Model> (
   const resource: Ref<InstanceType<ModelType> | undefined> = ref()
   const id = ref(options.id || null)
 
-  const removing = ref(false)
+  const removing = ref<string | number>('')
 
   const onRemoveCallbacks = ref<OnRemoveCallback<InstanceType<ModelType>>[]>([])
 
@@ -55,14 +55,14 @@ export default function useRemoveResource<ModelType extends typeof Model> (
     onRemoveCallbacks.value.push(callback)
   }
 
-  async function remove (resourceParam?: number | { id: number | string }) {
-    removing.value = true
-
+  async function remove (resourceParam?: number | string | { id: number | string }) {
     if (resourceParam) {
       id.value = typeof resourceParam === 'number'
         ? resourceParam
         : resourceParam.id
     }
+
+    removing.value = id.value ?? ''
 
     return new Promise((resolve) => {
       setTimeout(() => {
@@ -70,7 +70,7 @@ export default function useRemoveResource<ModelType extends typeof Model> (
         repo.destroy(id.value)
         delete resources.value[id.value]
 
-        removing.value = false
+        removing.value = ''
 
         onRemoveCallbacks.value.forEach(callback => callback(resource.value))
         resolve()

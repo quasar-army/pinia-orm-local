@@ -1,6 +1,6 @@
 import { ComputedRef, Ref, ref } from 'vue'
 import { MaybeComputedRef, MaybeRef, useLocalStorage } from '@vueuse/core'
-import { Model } from '../types'
+import { Model } from 'pinia-orm'
 import { ResourceNode } from '../types/ResourceNode'
 import { Repository, useRepo } from 'pinia-orm'
 import { Filters } from '../types/query/Filters'

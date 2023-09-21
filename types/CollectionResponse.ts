@@ -1,4 +1,4 @@
-import { Model } from './Model'
+import { Model } from 'pinia-orm'
 
 export interface CollectionResponse<ModelType extends Model = Model> {
   data: ModelType[]

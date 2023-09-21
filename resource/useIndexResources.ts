@@ -2,7 +2,7 @@ import { Ref, ref } from 'vue'
 import { useLocalStorage } from '@vueuse/core'
 import { v4 as uuidv4 } from 'uuid'
 
-import { Model } from '../types'
+import { Model } from 'pinia-orm'
 
 import { Repository, useRepo } from 'pinia-orm'
 import { CollectionResponse } from '../types/CollectionResponse'

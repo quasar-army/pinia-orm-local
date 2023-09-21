@@ -1,4 +1,4 @@
-import { Model } from './Model'
+import { Model } from 'pinia-orm'
 import { Resource } from './Resource'
 
 export interface ResourceNode<ModelType extends Model> {

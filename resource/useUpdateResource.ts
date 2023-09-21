@@ -1,6 +1,6 @@
 import { Ref, ref } from 'vue'
 import { MaybeRef, useLocalStorage } from '@vueuse/core'
-import { Model } from '../types'
+import { Model } from 'pinia-orm'
 import { ResourceNode } from '../types/ResourceNode'
 import { Item, Relation, useRepo } from 'pinia-orm'
 import useFetchResource from './useFetchResource'

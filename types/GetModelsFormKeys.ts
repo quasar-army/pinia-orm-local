@@ -1,5 +1,5 @@
 import { RemoveIndex } from 'src/shared/types/RemoveIndex'
-import { Model } from './Model'
+import { Model } from 'pinia-orm'
 
 export type GetModelsFormKeys<T extends Model> =
   keyof Omit<
