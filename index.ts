@@ -21,7 +21,6 @@ export type { UseRestStateManipulator } from './types/UseRestStateManipulator'
 /**
  * Other
  */
-export { Model } from './types/Model'
 export { makeFormFromModel } from './resource/makeFormFromModel'
 
 /**
